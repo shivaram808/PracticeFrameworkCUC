@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.37245">
+<testcase classname="Automating About us page" name="Verify About us icon is displayed" time="15.37245">
+<system-out><![CDATA[Given Login to TS RTC website using valid username and password.............passed
+Then Navigate to About us page..............................................passed
+And Verify About us icon is displayed.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
