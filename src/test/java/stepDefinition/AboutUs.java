@@ -19,7 +19,9 @@ public class AboutUs extends BaseClass{
 	
 	@Then("^Navigate to About us page$")
 	public void navigate_to_About_us_page() throws Exception {
+
 		System.out.println("This is Nandus sout");
+
 		ab.navigateAboutUSpage();
 	}
 
