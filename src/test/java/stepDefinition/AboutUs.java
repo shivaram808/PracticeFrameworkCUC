@@ -21,9 +21,8 @@ public class AboutUs extends BaseClass {
 	@Then("^Navigate to About us page$")
 	public void navigate_to_About_us_page() throws Exception {
 
-		System.out.println("This is Nandus sout");
-
 		ab.navigateAboutUSpage();
+		System.out.println("Navigated to about us page");
 	}
 
 	@Then("^Verify About us icon is displayed$")
@@ -73,10 +72,16 @@ public class AboutUs extends BaseClass {
 		}
 	}
 	
-}
 
 	@Given("^Fetch no of available serices for bus : \"([^\"]*)\"$")
 	public void fetch_no_of_available_serices_for_bus(String BusType) throws Exception {
+
+		String NoOFBusses = driver.findElement(By.xpath("//td[text()='"+BusType+"']//parent::tr/td[3]")).getText();
+		System.out.println("Number of busses vailable for - " +BusType+ " : "+NoOFBusses);
+	}
+
+	@Given("^Display Number of busses available for each bus type \"([^\"]*)\"$")
+	public void display_Number_of_busses_available_for_each_bus_type(String BusType) throws Exception {
 
 		String NoOFBusses = driver.findElement(By.xpath("//td[text()='"+BusType+"']//parent::tr/td[3]")).getText();
 		System.out.println("Number of busses vailable for - " +BusType+ " : "+NoOFBusses);
