@@ -19,12 +19,6 @@ import java.util.concurrent.TimeUnit;
 
             List<WebElement> ful_tab = driver.findElements(By.cssSelector("table[class=\"boxborderTd\"]>tbody>tr>td"));
             int tb_cnt=ful_tab.size();
-//        System.out.println("webElem line read "+tb_cnt);
-//int k=1;
-//        String s=ful_tab.get(k).getText();
-//        int a =s.length();
-//        System.out.println(s);
-//        System.out.println(a);
 
             String src="Deluxe (2 + 2 Non-AC)";
 
