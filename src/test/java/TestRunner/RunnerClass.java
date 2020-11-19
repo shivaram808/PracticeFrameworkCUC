@@ -6,7 +6,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(plugin = {"html:test-output/cucumberreports","json:test-output/cucumberreports/cucumber.json",
 "pretty:test-output/cucumberreports/cucumber-pretty.txt","junit:test-output/cucumberreports/cucumber-results.xml"},
-features=".\\src\\test\\resources\\features",tags ="@AboutUS",glue = {"stepDefinition"})
+features=".\\src\\test\\resources\\features",tags ="@BusService",glue = {"stepDefinition"})
 public class RunnerClass extends AbstractTestNGCucumberTests{
 
 
