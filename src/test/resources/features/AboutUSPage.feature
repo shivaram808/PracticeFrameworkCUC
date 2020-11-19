@@ -2,9 +2,9 @@ Feature: Automating About us page
 
   @AboutUS 
   Scenario: Verify About us icon is displayed
-    
+
     Given Login to TS RTC website using valid username and password
-    Then  Navigate to About us page 
+    Then  Navigate to About us page
     And  Verify About us icon is displayed
 
   @BusService
@@ -12,11 +12,13 @@ Feature: Automating About us page
 
     Given Login to TS RTC website using valid username and password
     Then  Navigate to About us page
-    And  Verify if "Hari" service is available
+    And  Verify if "Indra (2 + 2 AC Semi-Sleeper)" service is available
 
+@NoOfServices
+Scenario: Verify No of services
 
+  Given Login to TS RTC website using valid username and password
+  Then  Navigate to About us page
+  And Verify if "Indra (2 + 2 AC Semi-Sleeper)" service is available
+  And Display number of services of "Indra (2 + 2 AC Semi-Sleeper)"
 
-
-
-
-    
