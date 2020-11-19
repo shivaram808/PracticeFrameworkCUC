@@ -60,6 +60,14 @@ public class AboutUs extends BaseClass{
 //            System.out.println("----- end -----");
 		}
 	}
+
+
+	@Given("^Fetch no of available serices for bus : \"([^\"]*)\"$")
+	public void fetch_no_of_available_serices_for_bus(String BusType) throws Exception {
+
+		String NoOFBusses = driver.findElement(By.xpath("//td[text()='"+BusType+"']//parent::tr/td[3]")).getText();
+		System.out.println("Number of busses vailable for - " +BusType+ " : "+NoOFBusses);
+	}
 	
 	
 		
