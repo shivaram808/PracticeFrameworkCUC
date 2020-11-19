@@ -43,7 +43,6 @@ public class AboutUs extends BaseClass {
 		for (int row = 0; row < row_cnt; row++) {
 			List<WebElement> col_row = row_tab.get(row).findElements(By.cssSelector("table[class=\"boxborderTd\"]>tbody>tr>td"));
 			int col_cnt = col_row.size();
-//            System.out.println("no. of cell in row "+row+ " are "+col_cnt);
 
 			for (int col = 0; col < col_cnt; col++) {
 				String celtxt = col_row.get(col).getText();
@@ -51,30 +50,21 @@ public class AboutUs extends BaseClass {
 				if (celtxt.equalsIgnoreCase(BusType)) {
 					System.out.println(celtxt);
 					break;
-				}//                System.out.println("cel val of the row num "+ row +" and col num "+col+ " is "+celtxt);
-
+				}
 			}
-//            System.out.println("----- end -----");
 		}
 	}
 
 	@Given("^Display number of services of \"([^\"]*)\"$")
-	public void display_number_of_services_of(String BusNo) throws Exception
+	public void display_number_of_services_of(String BusName) throws Exception
 	{
 		List<WebElement> ful_tab = driver.findElements(By.cssSelector("table[class=\"boxborderTd\"]>tbody>tr>td"));
 		int tb_cnt = ful_tab.size();
-//        System.out.println("webElem line read "+tb_cnt);
-//int k=1;
-//        String s=ful_tab.get(k).getText();
-//        int a =s.length();
-//        System.out.println(s);
-//        System.out.println(a);
-
-//		String src = "Deluxe (2 + 2 Non-AC)";
 
 		for (int i = 0; i < tb_cnt; i++) {
 			String fet = ful_tab.get(i).getText();
-			if (fet.equalsIgnoreCase(BusNo)) {
+
+			if (fet.equalsIgnoreCase(BusName)) {
 //            String cel_val =ful_tab.get(i).getText();
 //                System.out.println(fet);
 				System.out.println("No. of Bus Services for Search is: " + ful_tab.get(i + 1).getText());
