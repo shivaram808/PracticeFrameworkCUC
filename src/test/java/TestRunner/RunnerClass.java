@@ -9,5 +9,4 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 features=".\\src\\test\\resources\\features",tags ="@SelectSeats",glue = {"stepDefinition"})
 public class RunnerClass extends AbstractTestNGCucumberTests{
 
-
 }
