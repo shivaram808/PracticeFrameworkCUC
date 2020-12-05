@@ -1,10 +1,13 @@
-Feature: Automating Select Avl Seats page
+Feature: Automating Bus Booking page
 
-  @SelectSeats
-  Scenario: Verify Seats are selected
+  @BusBooking
+  Scenario: Verify Bus Booking is successful
     
     Given Login to TS RTC website using valid username and password
-    Then  Search a bus in booking page
+    Then Search a bus by From location "Hyderabad"
+    Then Search a bus by To location "Vijayawada"
+    Then Filter by BusType as "NON A/C CLASS"
+    Then Filter by BusBoarding Point "KPHB COLONY"
     Then Click on Select Seats button using bus no "2099"
 
     
